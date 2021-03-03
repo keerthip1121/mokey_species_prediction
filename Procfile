@@ -1,1 +1,1 @@
-web: gunicorn app:monsp
+web: gunicorn Flaskapp:monsp
