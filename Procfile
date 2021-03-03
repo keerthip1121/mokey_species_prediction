@@ -1,1 +1,1 @@
-web: gunicorn src.monsp:app --log-file=-
+web: gunicorn app:app 
