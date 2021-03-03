@@ -1,1 +1,1 @@
-web:gunicorn app:monsp.py
+web: gunicorn app:monsp
