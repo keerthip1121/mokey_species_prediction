@@ -1,2 +1,6 @@
 static
 tensorflow
+numpy
+keras
+flask
+gunicorn
