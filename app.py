@@ -59,7 +59,7 @@ def deploy():
     return render_template("index.html", prediction = pred, img_path = path, content = text)
 
 if __name__=='__main__':
-    app.run(debug=True, use_reloader=False)
+    app.run(debug=True)
 
     
     
