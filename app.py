@@ -27,7 +27,7 @@ char = {0:['*Mantled howler: The mantled howler, or golden-mantled howling monke
         8:['*Black headed night monkey: The black-headed night monkey is a night monkey species from South America. It is found in Bolivia, Brazil and Peru. The A. nigriceps in Peru were notably inhabiting areas that were degraded, and often these areas were disturbed either by human activities or natural occurrences in the ecosystem.','Scientific name: Aotus nigriceps','Kingdom:Animalia','Phylum:Chordata','Class:Mammalia','Order:Primates','Suborder:Haplorhini','Infraorder:Simiiformes','Family:	Aotidae','Genus:Aotus'],
         9:['*Nilgiri langur: The Nilgiri langur is a langur found in the Nilgiri Hills of the Western Ghats in South India. Its range also includes Kodagu in Karnataka, Kodayar Hills in Tamil Nadu, and many other hilly areas in Kerala and Tamil Nadu. This primate has glossy black fur on its body and golden brown fur on its head.','Scientific name: Trachypithecus johnii','Kingdom:Animalia','Phylum:Chordata','Class:Mammalia','Order:Primates','Suborder:Haplorhini','Infraorder:Simiiformes','Family:	Cercopithecidae','Genus:Semnopithecus']}
 
-model = tf.keras.models.load_model('D:/internship/img_clsf/inceptionv3.h5')
+model = tf.keras.models.load_model('./inceptionv3.h5')
  
 @app.route("/", methods=["GET"])
 def home():
