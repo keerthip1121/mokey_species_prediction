@@ -1,0 +1,21 @@
+<html>
+<head>
+<center>
+<h1> Monkey Species Classification </h1>
+</center>
+</head>
+<body>
+<center>
+    <form action="/submit" method="POST" enctype="multipart/form-data">
+        <label>Upload Image:</label>
+        <input type="file" name="my_img" required/>
+        <button type="submit">Submit</button> 
+    </form>
+    {% if prediction %}
+  <img src="{{img_path}}" height="400px" width="400px">
+	<h2> Your Prediction: <i> {{prediction}} </i></h2>
+	<h4> Description: <p> {{content}} </p> </h4>
+	{% endif %}
+</center>
+</body>
+</html>
