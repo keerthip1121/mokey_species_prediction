@@ -9,6 +9,7 @@ Created on Mon Mar  1 11:17:58 2021
 from flask import Flask, render_template, request
 import numpy as np
 import tensorflow as tf
+import cv2
 
 app = Flask(__name__, template_folder="template")
 
@@ -59,7 +60,7 @@ def deploy():
     return render_template("index.html", prediction = pred, img_path = path, content = text)
 
 if __name__=='__main__':
-    app.run(debug=True, use_reloader=False)
+    app.run(debug=True)
 
     
     
