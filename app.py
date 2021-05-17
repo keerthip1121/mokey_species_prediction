@@ -8,7 +8,7 @@ Created on Mon Mar  1 11:17:58 2021
 
 from flask import Flask, render_template, request
 import numpy as np
-from keras.models import load_model
+import tensorflow as tf
 from keras.preprocessing.image import load_img, img_to_array
 
 app = Flask(__name__, template_folder="template")
@@ -28,7 +28,7 @@ char = {0:['*Mantled howler: The mantled howler, or golden-mantled howling monke
         8:['*Black headed night monkey: The black-headed night monkey is a night monkey species from South America. It is found in Bolivia, Brazil and Peru. The A. nigriceps in Peru were notably inhabiting areas that were degraded, and often these areas were disturbed either by human activities or natural occurrences in the ecosystem.','Scientific name: Aotus nigriceps','Kingdom:Animalia','Phylum:Chordata','Class:Mammalia','Order:Primates','Suborder:Haplorhini','Infraorder:Simiiformes','Family:	Aotidae','Genus:Aotus'],
         9:['*Nilgiri langur: The Nilgiri langur is a langur found in the Nilgiri Hills of the Western Ghats in South India. Its range also includes Kodagu in Karnataka, Kodayar Hills in Tamil Nadu, and many other hilly areas in Kerala and Tamil Nadu. This primate has glossy black fur on its body and golden brown fur on its head.','Scientific name: Trachypithecus johnii','Kingdom:Animalia','Phylum:Chordata','Class:Mammalia','Order:Primates','Suborder:Haplorhini','Infraorder:Simiiformes','Family:	Cercopithecidae','Genus:Semnopithecus']}
 
-model = load_model('D:/internship/img_clsf/inceptionv3.h5')
+model = tf.keras.models.load_model('D:/internship/img_clsf/inceptionv3.h5')
  
 @app.route("/", methods=["GET"])
 def home():
@@ -60,7 +60,7 @@ def deploy():
     return render_template("index.html", prediction = pred, img_path = path, content = text)
 
 if __name__=='__main__':
-    app.run(debug=True)
+    app.run(debug=True, use_reloader=False)
 
     
     
