@@ -9,7 +9,7 @@ Created on Mon Mar  1 11:17:58 2021
 from flask import Flask, render_template, request
 import numpy as np
 import tensorflow as tf
-import cv
+import cv2
 
 app = Flask(__name__, template_folder="template")
 
@@ -36,8 +36,8 @@ def home():
 
 
 def predict(path):
-    img = cv.imread(path)
-    img = cv.resize(img,(224,224))
+    img = cv2.imread(path)
+    img = cv2.resize(img,(224,224))
     img = img/255.
     img = np.array([img])
     
